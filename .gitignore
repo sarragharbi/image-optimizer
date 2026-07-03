@@ -1,0 +1,6 @@
+node_modules/
+tmp/uploads/*
+tmp/compressed/*
+!tmp/uploads/.gitkeep
+!tmp/compressed/.gitkeep
+npm-debug.log*
