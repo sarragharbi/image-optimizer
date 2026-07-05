@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Optimizer &mdash; Compress any image, any size</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="card__header">
+      <h1>Image Optimizer</h1>
+      <p class="subtitle">Compress images of any size &mdash; even multi-gigabyte files &mdash; down to lightweight WebP.</p>
+    </header>
+
+    <section class="dropzone" id="dropzone">
+      <input type="file" id="fileInput" accept="image/*" hidden />
+      <label for="fileInput" class="dropzone__label">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="dropzone__icon" aria-hidden="true">
+          <path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"
+                fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span id="dropzoneText">Click to choose an image, or drag &amp; drop it here</span>
+        <span class="dropzone__hint">No file size limit</span>
+      </label>
+    </section>
+
+    <div id="fileInfo" class="file-info" hidden>
+      <span id="fileName"></span>
+      <span id="fileSize"></span>
+    </div>
+
+    <div class="actions">
+      <button id="compressBtn" class="btn btn--primary" disabled>Compress Image</button>
+      <button id="cancelBtn" class="btn btn--secondary" hidden>Cancel</button>
+    </div>
+
+    <section id="progressSection" class="progress-section" hidden>
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-bar__fill"></div>
+      </div>
+      <p id="progressLabel" class="progress-label">Uploading&hellip; 0%</p>
+    </section>
+
+    <p id="statusMessage" class="status-message" hidden></p>
+
+    <div id="resultActions" class="result-actions" hidden>
+      <a id="resultLink" class="btn btn--primary" href="#" target="_blank" rel="noopener noreferrer">
+        View Compressed Image
+      </a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

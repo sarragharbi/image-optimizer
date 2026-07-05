@@ -1,0 +1,20 @@
+{
+  "name": "image-optimizer",
+  "version": "1.0.0",
+  "description": "Streaming image upload service built with Express, Busboy and Cloudinary. Streams images of any size directly to Cloudinary for on-the-fly compression, without buffering them in memory or on local disk.",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "cloudinary": "^2.10.0",
+    "dotenv": "^17.4.2",
+    "express": "^4.19.2"
+  }
+}
